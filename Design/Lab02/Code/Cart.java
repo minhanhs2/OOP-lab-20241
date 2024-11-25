@@ -37,7 +37,18 @@ public class Cart {
         Order++;
         System.out.println("Already added" + dvd.getName() + " to cart.");
     }
-
+    public void addDVD(DigitalVideoDisc[] dvdList) {
+    	if (dvdList == null) {
+            return;
+        }
+        for (DigitalVideoDisc dvd : dvdList) {
+            addDVD(dvd);
+        }
+    }
+    public void addDVD(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        addDVD(dvd1);
+        addDVD(dvd2);
+    }
     public double totalPrice() {
         double total = 0;
         for (DigitalVideoDisc dvd : listDVDInCart) {
