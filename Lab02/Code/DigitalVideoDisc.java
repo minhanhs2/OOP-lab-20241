@@ -46,7 +46,12 @@ public class DigitalVideoDisc {
         this.genre = genre;
         this.releaseDate = releaseDate;
     }
-
+    public DigitalVideoDisc(String name) {
+        this.name = name;
+    }
+    public void setName(String name2) {
+		this.name = name2;
+	}
     public String getName() {
         return name;
     }
