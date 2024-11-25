@@ -79,4 +79,12 @@ public class DigitalVideoDisc {
 		// TODO Auto-generated method stub
 		this.name = name2;
 	}
+    public String toString() {
+        return "DVD - " + name + " - " + author + " - " + length + ": " + price + " $";
+    }
+	public boolean isMatch(String title) {
+        String lowerCaseTitle = name.toLowerCase();
+        String lowerCaseInput = title.toLowerCase();
+        return lowerCaseTitle.contains(lowerCaseInput);
+    }
 }

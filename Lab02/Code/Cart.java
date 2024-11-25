@@ -79,4 +79,19 @@ public class Cart {
         }
         System.out.println("DVD '" + dvdTitle + "' not found in cart.");
     }
+    
+    public void printCart() {
+        if (listDVDInCart.isEmpty()) {
+            System.out.println("Cart is empty.");
+            return;
+        }
+
+        System.out.println("********************CART********************");
+        System.out.println("Ordered Items:");
+
+        for (int i = 0; i < listDVDInCart.size(); i++) {
+            DigitalVideoDisc dvd = listDVDInCart.get(i);
+            System.out.println((i + 1) + ". " + dvd.toString()); 
+        }
+}
 }
