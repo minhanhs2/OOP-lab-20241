@@ -1,7 +1,5 @@
 package Lab02.Code; 
 
-import java.util.List;
-
 public class DigitalVideoDisc {
     String name;
     String description;
