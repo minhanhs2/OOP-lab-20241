@@ -1,0 +1,13 @@
+To Minh Anh 20225787
+
+6.1 
+- If users choose "Cancel", message will be "You've choose: I don't"
+- Use showOptionDialog instead of showConfirmDialog, like this: 
+"int option = JOptionPane.showOptionDialog(null, 
+                "To Minh Anh 20225787 homework - Do you want to change to the first class ticket?", 
+                "Choose an option", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                options, 
+                options[0]);
