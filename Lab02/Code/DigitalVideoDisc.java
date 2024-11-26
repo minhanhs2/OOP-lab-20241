@@ -53,6 +53,12 @@ public class DigitalVideoDisc {
     public double getprice() {
         return price;
     }
+    public int getId () {
+        return id;
+    }
+    public String getTitle () {
+        return name; 
+    }
     public void ShowDetail() {
         System.out.println("DVD's detail:");
         System.out.println("Title: " + name);

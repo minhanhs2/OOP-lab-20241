@@ -94,4 +94,28 @@ public class Cart {
             System.out.println((i + 1) + ". " + dvd.toString()); 
         }
 }
+
+public DigitalVideoDisc searchByID(int id) {
+    for (int i = 0; i < listDVDInCart.size(); i++) { 
+        if (listDVDInCart.get(i).getId() == id) { 
+            return listDVDInCart.get(i); 
+        }
+    }
+    System.out.println("Not found DVD with ID: " + id); 
+    return null; 
+}
+
+// Search by Title
+public void searchByTitle(String title) {
+    boolean found = false;
+    for (int i = 0; i < listDVDInCart.size(); i++) { 
+        if (listDVDInCart.get(i).getTitle().toLowerCase().contains(title.toLowerCase())) { 
+            System.out.println("Founded DVD with title: " + listDVDInCart.get(i).getTitle()); 
+            found = true;
+        }
+    }
+    if (!found) {
+        System.out.println("Not found DVD with title: " + title);
+    }
+}
 }

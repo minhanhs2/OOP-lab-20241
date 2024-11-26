@@ -14,5 +14,13 @@ public class CartTest {
         cart.addDVD(dvd3);
 
         cart.printCart();
+    
+    DigitalVideoDisc searchByID = cart.searchByID(1); // Starwar ID
+        if (searchByID != null) {
+            System.out.println("Founded DVD with ID: " + searchByID.getName());
+        }
+
+        // Search with Title
+        cart.searchByTitle("Lion");
     }
 }
