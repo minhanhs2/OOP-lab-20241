@@ -1,17 +1,22 @@
 1. Is JAVA a Pass by Value or a Pass by Reference programming language?
 
-Java là ngôn ngữ lập trình truyền tham số theo giá trị.
+
+- Java là ngôn ngữ lập trình truyền tham số theo giá trị.
 
 2. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
 
-Sau khi gọi hàm `swap(jungleDVD, cinderellaDVD)`, tiêu đề vẫn giữ nguyên vì hàm này chỉ hoán đổi giá trị của trường tiêu đề, chứ không phải tham chiếu đến đối tượng. 
-
-Các tham chiếu `jungleDVD` và `cinderellaDVD` vẫn trỏ đến cùng một đối tượng, vì vậy bản thân các đối tượng vẫn giữ nguyên, chỉ có trường tiêu đề của chúng được hoán đổi.
+- Sau khi gọi hàm `swap(jungleDVD, cinderellaDVD)`, 
+tiêu đề vẫn giữ nguyên vì hàm này chỉ hoán đổi giá trị của trường tiêu đề, 
+chứ không phải tham chiếu đến đối tượng. Các tham chiếu `jungleDVD` và `cinderellaDVD` 
+vẫn trỏ đến cùng một đối tượng, vì vậy bản thân các đối tượng vẫn giữ nguyên, chỉ có 
+trường tiêu đề của chúng được hoán đổi.
 
 3. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
 
-Tiêu đề của `jungleDVD` bị thay đổi vì hàm `changeTitle()` trực tiếp sửa đổi trường tiêu đề của nó bằng cách sử dụng giá trị từ `cinderellaDVD.getTitle()`.
+- Tiêu đề của `jungleDVD` bị thay đổi vì hàm `changeTitle()` trực tiếp sửa đổi 
+trường tiêu đề của nó bằng cách sử dụng giá trị từ `cinderellaDVD.getTitle()`.
 
 4. Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
 
-Kiểu trả về nên là `String`.
+- Kiểu trả về: String
+
