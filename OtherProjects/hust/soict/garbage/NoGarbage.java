@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 package hust.soict.garbage;
+=======
+package hust.soict.garbage
+
+>>>>>>> Stashed changes
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -26,4 +31,8 @@ public class NoGarbage {
 			}
 	}
 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
