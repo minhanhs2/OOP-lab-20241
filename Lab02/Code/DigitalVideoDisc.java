@@ -59,6 +59,18 @@ public class DigitalVideoDisc {
     public String getTitle () {
         return name; 
     }
+    public double getCost() {
+        return price;
+    }
+    public int getLength() {
+        return length;
+    }
+    public String getDirector() {
+        return author;
+    }
+    public String getCategory(){
+        return genre; 
+    }
     public void ShowDetail() {
         System.out.println("DVD's detail:");
         System.out.println("Title: " + name);
