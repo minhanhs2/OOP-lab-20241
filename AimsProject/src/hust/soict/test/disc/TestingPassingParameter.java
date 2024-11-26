@@ -1,4 +1,6 @@
-package Lab02.Code;
+package src.hust.soict.test.disc;
+
+import src.hust.soict.aims.disc.DigitalVideoDisc;
 
 public class TestingPassingParameter {
 

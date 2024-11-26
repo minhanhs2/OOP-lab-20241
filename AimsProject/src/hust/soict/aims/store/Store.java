@@ -1,6 +1,8 @@
-package Lab02.Code;
+package src.hust.soict.aims.store;
 
 import java.util.ArrayList;
+
+import src.hust.soict.aims.disc.DigitalVideoDisc;
 
 public class Store {
     private ArrayList<DigitalVideoDisc> DVDInStore;

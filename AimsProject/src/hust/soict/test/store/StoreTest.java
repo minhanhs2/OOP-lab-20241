@@ -1,4 +1,7 @@
-package Lab02.Code;
+package src.hust.soict.test.store;
+
+import src.hust.soict.aims.disc.DigitalVideoDisc;
+import src.hust.soict.aims.store.Store;
 
 public class StoreTest {
     public static void main(String[] args) {
