@@ -1,37 +1,42 @@
 package src.hust.soict.aims.store;
 
 import java.util.ArrayList;
-import src.hust.soict.aims.disc.DigitalVideoDisc;
-
+import src.hust.soict.aims.media.Media;
+ 
+ 
 public class Store {
-    private ArrayList<DigitalVideoDisc> DVDInStore;
-
-    public Store() {
-        DVDInStore = new ArrayList<>();
-    }
-
-    public void addDvd(DigitalVideoDisc dvd) {
-        DVDInStore.add(dvd);
-        System.out.println("Added DVD to store: " + dvd.getTitle());
-    }
-
-    public void removeDvd(DigitalVideoDisc dvd) {
-        if (DVDInStore.remove(dvd)) {
-            System.out.println("Removed DVD from store: " + dvd.getTitle());
-        } else {
-            System.out.println("Not Found DVD " + dvd.getTitle() + " in store");
-        }
-    }
-
-    public void printStore() {
-        System.out.println("********************CART***********************");
-        System.out.println("Ordered Items:");
-        for (int i = 0; i < DVDInStore.size(); i++) {
-            DigitalVideoDisc dvd = DVDInStore.get(i);
-            System.out.println((i + 1) + ". DVD - " + dvd.getTitle() + " - "
-                    + dvd.getCategory() + " - " + dvd.getDirector()
-                    + " - " + dvd.getLength() + ": " + dvd.getCost() + " $");
-        }
-        System.out.println("***********************************************");
-    }
+   	private ArrayList<Media> itemsInStore = new ArrayList<>();
+   	
+   	public void addMedia(Media media) {
+          	if(!itemsInStore.contains(media)) {
+                 	itemsInStore.add(media);
+                 	System.out.println("Add successfully");
+          	}
+          	else System.out.println("Already have!!!");
+   	}
+   	
+   	public void removeMedia(Media media) {
+          	if(itemsInStore.contains(media)) {
+                 	itemsInStore.remove(media);
+                 	System.out.println("Remove successfully");
+          	}
+          	else System.out.println("Don't have!!!");
+   	}
+   	
+   	public void printStore() {
+          	System.out.println("******************************************");
+          	for(Media media : itemsInStore) {
+                 	media.print();
+          	}
+   	   	System.out.println("*********************************************");
+   	}
+   	
+   	public Media searchMediaByTitle(String title) {
+          	for(Media media : itemsInStore) {
+                 	if(media.isMatch(title)) {
+                       	return media;
+                 	}
+          	}
+                 	return null;
+   	}
 }
