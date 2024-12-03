@@ -1,0 +1,20 @@
+? Alternatively, to compare items in the cart, instead of using Comparator, we can use the Comparable interface and override the compareTo()method. You can refer to the Java docs to see the information of this interface.  
+Suppose we are taking this Comparable interface approach. 
+What class should implement the Comparable interface? 
+In those classes, how should you implement the compareTo()method be to reflect the ordering that we want? 
+Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach? 
+Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this? 
+
+
+- Media Class: Since all media types (Book, DVD, CD, etc.) are subclasses of Media, 
+the default sorting rule should be defined within the Media class itself.
+
+- In the Media class, the compareTo() method should define the default sorting rule 
+for all media types. For example, you could sort by title first, then by cost.
+
+- You cannot have two sorting rules using only the Comparable interface. It supports
+ only one default sorting rule (implemented in compareTo()). If you need multiple
+ sorting rules, you must use additional Comparator classes.
+ 
+- Override the compareTo() method in the DigitalVideoDisc subclass to apply a 
+different sorting rule (e.g., by title, then decreasing length, then cost).
