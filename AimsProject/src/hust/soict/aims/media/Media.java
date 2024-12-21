@@ -73,15 +73,24 @@ public abstract class Media {
    	}
    	
    	@Override
-   	public boolean equals(Object o) {
-          	Media media = (Media) o;
-          	try {
-                 	String title = media.getTitle();
-                 	return title.equals(this.getTitle());
-          	} catch (NullPointerException e) {
-                 	return false;
-          	}
-   	}
+	public boolean equals(Object o) {
+		try {
+	        if (this == o) return true;
+
+	        if (o == null || getClass() != o.getClass()) return false;
+
+	        Media media = (Media) o;
+	        return this.title != null && this.title.equals(media.title);
+	        
+	    } catch (NullPointerException e) {
+	        System.err.println("NullPointerException: Title của đối tượng hoặc đối tượng là null.");
+	        return false;
+	        
+	    } catch (ClassCastException e) {
+	        System.err.println("ClassCastException: Không thể ép kiểu đối tượng so sánh.");
+	        return false;
+	    }
+	}
    	
    	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
    	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
