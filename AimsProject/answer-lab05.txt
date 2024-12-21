@@ -1,0 +1,3 @@
+? What happens if the Aims class is not updated to handle exceptions when the play() method is called? 
+
+When an exception occurs and isn't handled, it will "propagate" up through the layers of the program until it encounters a `try-catch` block or reaches the `main()` function. If the `main()` function also doesn't handle this exception, the program will terminate abruptly and display error information on the screen. This makes the program less robust and harder to use.
